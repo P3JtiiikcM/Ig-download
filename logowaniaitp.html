@@ -1,159 +1,143 @@
 <!DOCTYPE html>
+<html lang="pl">
 <head>
-  <meta charset="">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Zippysharev2</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: url('https://c4.wallpaperflare.com/wallpaper/108/756/918/garrys-mod-wallpaper-preview.jpg') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      color: #fff;
+    }
+
+    header, footer, main {
+      width: 90%;
+      max-width: 1000px;
+      margin: 20px 0;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    }
+
+    .logo img {
+      width: 200px;
+      border-radius: 10px;
+    }
+
+    .nav-buttons {
+      display: flex;
+      gap: 15px;
+      margin-top: 10px;
+    }
+
+    .nav-buttons a button {
+      background-color: bisque;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 10px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    .nav-buttons a button:hover {
+      background-color: burlywood;
+      transform: scale(1.05);
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      text-align: center;
+      font-size: 18px;
+    }
+
+    .download-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #4CAF50;
+      color: white;
+      font-size: 20px;
+      padding: 15px 30px;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      margin-top: 20px;
+      text-decoration: none;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    .download-btn i {
+      margin-right: 10px;
+    }
+
+    .download-btn:hover {
+      background-color: #45a049;
+      transform: scale(1.05);
+    }
+
+    .download-btn:active {
+      background-color: #388e3c;
+      transform: scale(0.95);
+    }
+
+    .game-image {
+      width: 100%;
+      max-width: 600px;
+      margin-top: 30px;
+      border-radius: 10px;
+    }
+  </style>
 </head>
-<style>
- .h1{
-  text-align: center;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  color:bisque;
-  font-size: 30px;
-  
- }
-
- .img{
-  border-radius: 10px;
-  
- }
-
- .ft{
-  position: inherit;
-  background-color: burlywood;
-  height:50px;
-  border-radius: 15px;
-
- }
-
- .hd{
-  border-radius: 20px;
-  background-color: gray;
-  width:15cm;
-  text-align: left;
-
- }
-
- .p{
-  text-align: center;
-  color:black;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
- }
- 
- .button{
-  
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  background-color:bisque;
-  font-size: 20px;
-  border-radius: 10px;
-
- }
-
- #ft2{
-  text-align: left;
-  width:25cm;
- }
-
- .download-btn {
-            background-color: #4CAF50; /* Green */
-            color: white;
-            font-size: 16px;
-            padding: 15px 32px;
-            text-align: center;
-            text-decoration: none;
-            border-radius: 8px;
-            border: none;
-            cursor: pointer;
-            transition: transform 0.3s, background-color 0.3s;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .download-btn:hover {
-            background-color: #45a049;
-            transform: scale(1.1);
-        }
-
-        .download-btn:active {
-            background-color: #388e3c;
-            transform: scale(0.95);
-        }
-
-        .download-btn i {
-            margin-right: 10px;
-            text-align: center;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f4f4f9;
-            height: 100%;
-            background: url('https://c4.wallpaperflare.com/wallpaper/108/756/918/garrys-mod-wallpaper-preview.jpg') no-repeat center center fixed;
-            background-size: cover; /* Dopasowanie tła do ekranu */
-            font-family: Arial, sans-serif;
-        }
-       
-      
-  
- 
-</style>
 
 <body>
-  
-  <center>
-    <header id="ft2">
-     <center>
-      <img class="img" src="https://static.wikia.nocookie.net/logopedia/images/4/4a/ZippyShare_Logo.jpg/revision/latest?cb=20201019103515"
-      width="200" alt="logo">
-     </center>
-     <br>
-     
-      <footer class="ft">
+
+  <header class="logo">
+    <img src="https://static.wikia.nocookie.net/logopedia/images/4/4a/ZippyShare_Logo.jpg/revision/latest?cb=20201019103515" alt="logo">
+    <div class="nav-buttons">
+      <a href="#"><button>O mnie</button></a>
+      <a href="#"><button>Inne gry</button></a>
+    </div>
+  </header>
+
+  <main>
+    <h1>Garry's Mod Download</h1>
+    <p>Na tej stronie możesz pobrać <strong>Garry's Mod</strong>.<br>
+       To w pełni działający launcher tej gry.<br>
+       Kliknij w przycisk poniżej, żeby <strong>pobrać</strong> grę!</p>
       
 
-      <a style="float: left; margin-left: 20px; margin-top: 10px;" href="">
-        <button class="button">O mnie</button>  
-        
+      <br>
+    <center>
+      <a href="https://ptoszek.pl/" class="download-btn">
+        <i class="fas fa-download"></i> Pobierz plik
       </a>
-      <a style="float: left; margin-left: 20px; margin-top: 10px;" href="">
-        <button class="button">Inne gry</button>
-      </a>
-      </footer>
-      <br>
-      <br>
-      
-    </header>
-     
-    
-  
-    <header class="hd">
-      <h3 class="h1">Garry's mod download</h3>
-      <br>
-      <br>
-      <p class="p">Na tej stronie mozesz pobrać Garry's mod.<br>
-      Jest to w  <strong>w pełni działający</strong> launcher tej gry.<br>
-      Pod spodem znajdziesz przycisk do <strong>pobrania</strong> gry.</p>
-      <br>
-     <center>
-      <a href="https://ptoszek.pl/">
-        <button class="download-btn">
-            <i class="fas fa-download"></i> Download File
-        </button>
-     </center>
-    </a>
-      <br>
-      <br>
-      <center>
-        <img class="img"  src="https://steamuserimages-a.akamaihd.net/ugc/2032851493626593123/F3CBC45E1D9363116625D789AAC418BB53916A56/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false"
-      width="400" alt="zdjęcie gry garry's mod">
-      </center>
-      <br>
-      <br>
+    </center>
+    <center>
 
-    </header>
-  </center>
+    <img class="game-image" src="https://steamuserimages-a.akamaihd.net/ugc/2032851493626593123/F3CBC45E1D9363116625D789AAC418BB53916A56/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false" alt="Garry's Mod Screenshot">
+ 
+    </center>
+ </main>
+
+  <footer>
+    <p style="text-align: center;">&copy; 2025 Zippysharev2 | Wszystkie prawa zastrzeżone, pajacu.</p>
+  </footer>
 
 </body>
+</html>
